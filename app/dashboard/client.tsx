@@ -1,13 +1,11 @@
 "use client";
 
-import { DashboardContent } from "@/components/dashboard/dashboard-content";
-
-// Purpose: Client UI for /dashboard.
-// Use this file for interactive/dashboard presentation logic.
+// This file now provides the DealNest CRM dashboard welcome message.
+// The prior DashboardContent import is no longer used and can be removed.
 
 type ClientProps = {
-  greeting: string;
-  firstName: string;
+  greeting?: string;
+  firstName?: string;
 };
 
 export default function Client({ greeting, firstName }: ClientProps) {
