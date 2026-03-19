@@ -38,10 +38,9 @@ export default function Client() {
       <section className="mx-auto flex min-h-[720px] w-full max-w-md items-center justify-center">
         <Card className="w-full border-secondary/70 shadow-xl">
           <CardHeader className="space-y-1">
-            <CardTitle>Forgot password</CardTitle>
+            <CardTitle>Reset your DealNest password</CardTitle>
             <CardDescription>
-              Enter your email and we&apos;ll send you a link to reset your
-              password.
+              We’ll send you a link to reset your password.
             </CardDescription>
           </CardHeader>
 
@@ -73,7 +72,7 @@ export default function Client() {
                   </div>
 
                   <Button type="submit" className="w-full" disabled={pending}>
-                    {pending ? "Sending..." : "Send reset link"}
+                    {pending ? "Sending..." : "Send Reset Link"}
                   </Button>
                 </form>
 
@@ -86,13 +85,17 @@ export default function Client() {
                   </p>
                 ) : null}
 
-                <div className="text-center">
+                <div className="text-center text-sm">
+                  Remembered your password?{" "}
                   <Link
                     href="/auth#signin"
-                    className="text-sm text-muted-foreground hover:text-foreground"
+                    className="font-medium text-primary hover:underline"
                   >
-                    Back to sign in
+                    Sign in
                   </Link>
+                </div>
+                <div className="mt-3 border-t pt-3 text-xs text-center text-muted-foreground">
+                  By continuing, you agree to the DealNest Terms of Service and Privacy Policy.
                 </div>
               </>
             )}
